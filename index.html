@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adrien (Zhiling) Chai — Data Scientist</title>
+<meta name="description" content="Adrien (Zhiling) Chai — Data Scientist & Analyst. Master of Data Science at Rice University. Experience in machine learning, data pipelines, and analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --muted:#6b6b6b;
+    --faint:#9a9a9a;
+    --line:#e7e4de;
+    --bg:#fbfaf7;
+    --card:#ffffff;
+    --accent:#3a5a40;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* Header / nav */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:rgba(251,250,247,.85);
+    backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+  nav .name{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;letter-spacing:-.01em}
+  nav .links{display:flex;gap:26px}
+  nav .links a{color:var(--muted);font-size:.9rem;font-weight:500}
+  nav .links a:hover{color:var(--ink);text-decoration:none}
+  @media(max-width:560px){nav .links{display:none}}
+
+  /* Hero */
+  header.hero{padding:84px 0 56px}
+  header.hero .eyebrow{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+  header.hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,3.4rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:20px}
+  header.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:600px}
+  .contact{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px}
+  .contact a{
+    border:1px solid var(--line);background:var(--card);
+    padding:8px 16px;border-radius:100px;font-size:.88rem;font-weight:500;color:var(--ink);
+    transition:border-color .2s,transform .2s;
+  }
+  .contact a:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+
+  /* Sections */
+  section{padding:48px 0;border-top:1px solid var(--line)}
+  .section-label{font-family:'Fraunces',serif;font-size:.95rem;font-weight:600;color:var(--faint);letter-spacing:.04em;text-transform:uppercase;margin-bottom:30px}
+
+  .entry{margin-bottom:38px}
+  .entry:last-child{margin-bottom:0}
+  .entry .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .entry h3{font-family:'Fraunces',serif;font-size:1.22rem;font-weight:600;letter-spacing:-.01em}
+  .entry .place{color:var(--muted);font-size:.9rem;font-weight:500;white-space:nowrap}
+  .entry .role{color:var(--accent);font-weight:600;font-size:.95rem;margin:2px 0 4px}
+  .entry .date{color:var(--faint);font-size:.85rem;margin-bottom:12px}
+  .entry ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .entry ul li{position:relative;padding-left:20px;color:#3a3a3a;font-size:.96rem}
+  .entry ul li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.55}
+
+  /* Skills */
+  .skill-group{margin-bottom:22px}
+  .skill-group h4{font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:10px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tags span{
+    background:var(--card);border:1px solid var(--line);
+    padding:5px 13px;border-radius:6px;font-size:.83rem;color:#444;
+  }
+
+  /* Education two-col */
+  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:560px){.edu-grid{grid-template-columns:1fr}}
+  .edu-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .edu-card h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600}
+  .edu-card .deg{color:var(--accent);font-weight:600;font-size:.92rem;margin:4px 0}
+  .edu-card .date{color:var(--faint);font-size:.84rem}
+
+  footer{padding:46px 0 64px;border-top:1px solid var(--line);text-align:center;color:var(--faint);font-size:.86rem}
+  footer a{font-weight:500}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="name">Adrien Chai</span>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="about">
+  <div class="wrap">
+    <div class="eyebrow">Data Scientist &amp; Analyst</div>
+    <h1>Adrien (Zhiling) Chai</h1>
+    <p class="lead">I turn messy data into clear decisions — building machine learning pipelines, statistical analyses, and dashboards that help teams act. Currently pursuing a Master of Data Science at Rice University.</p>
+    <div class="contact">
+      <a href="mailto:adrienchai6@gmail.com">adrienchai6@gmail.com</a>
+      <a href="tel:+18478345833">(847) 834-5833</a>
+      <a href="https://linkedin.com/in/adrienchai" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#about" style="cursor:default">McLean, VA</a>
+    </div>
+  </div>
+</header>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-label">Education</div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>Rice University</h3>
+        <div class="deg">Master of Data Science</div>
+        <div class="date">Aug 2026 – Dec 2027 (Expected) · Houston, TX</div>
+      </div>
+      <div class="edu-card">
+        <h3>Northwestern University</h3>
+        <div class="deg">B.A. Mathematics, Minor in Data Science</div>
+        <div class="date">Sep 2021 – Jun 2025 · Evanston, IL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-label">Work Experience</div>
+
+    <div class="entry">
+      <div class="top">
+        <h3>Snaplii</h3>
+        <span class="place">McLean, VA</span>
+      </div>
+      <div class="role">Growth Product Manager Intern</div>
+      <div class="date">February 2026 – May 2026</div>
+      <ul>
+        <li>Conducted research with new users, identifying key onboarding friction points and translating insights into product improvements to increase activation and first-purchase conversion.</li>
+        <li>Processed and analyzed 300+ transaction records using Python, performing category analysis to surface high-frequency spending behaviors and optimize partnership and cashback strategies.</li>
+        <li>Designed and ran interviews and surveys with existing users, uncovering core usage patterns, retention drivers, and pain points to inform product improvements.</li>
+        <li>Developed a multi-factor market evaluation framework across multiple states — incorporating demographic, income, and digital payment readiness metrics — to prioritize high-potential expansion markets.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="top">
+        <h3>Aecho, Inc.</h3>
+        <span class="place">Evanston, IL</span>
+      </div>
+      <div class="role">Data Analyst &amp; Machine Learning Intern</div>
+      <div class="date">July 2025 – December 2025</div>
+      <ul>
+        <li>Built automated data pipelines in Python and SQL to collect, clean, and store metadata from 500+ TED Talk videos via the YouTube Data API, improving processing speed by 10× and producing analysis-ready datasets.</li>
+        <li>Engineered a scalable system to extract and preprocess YouTube audio, generating 500+ synthetic voice samples with an open-source text-to-speech tool to support voice model development.</li>
+        <li>Designed and deployed a binary audio classification pipeline to detect cloned vs. original speech, training a scikit-learn Random Forest classifier that reached 99% internal-test and 80% unseen-data accuracy.</li>
+        <li>Crafted Tableau dashboards to visualize key metrics and delivered weekly updates to cross-functional stakeholders.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="top">
+        <h3>Chatham Business Association</h3>
+        <span class="place">Chicago, IL</span>
+      </div>
+      <div class="role">Data Analyst Intern</div>
+      <div class="date">June 2024 – September 2024</div>
+      <ul>
+        <li>Restructured legacy Excel datasets into a MySQL database, redesigning the data architecture and automating import workflows to improve processing efficiency by 40%.</li>
+        <li>Built an interactive property search tool for 500+ businesses and vacant properties, improving search efficiency by 60% and enabling data-driven outreach planning.</li>
+        <li>Developed Python scripts with the ArcGIS API for spatial analysis, visualizing 10,000+ building violations on ArcGIS Online to identify redevelopment opportunities.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-label">Projects</div>
+
+    <div class="entry">
+      <div class="top">
+        <h3>Yelp Restaurant Hours &amp; Popularity Analysis</h3>
+        <span class="place">Jan – Mar 2025</span>
+      </div>
+      <ul>
+        <li>Analyzed data from 150,000+ businesses in Python — cleaning, aggregating, and visualizing behavioral trends — and developed a composite popularity index to quantify restaurant performance.</li>
+        <li>Applied OLS regression to reveal a statistically significant negative relationship between restaurant hours and popularity, showing 72% of low-performing restaurants were fast food with extended but inefficient hours.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="top">
+        <h3>Tree Planting Need in Pilsen</h3>
+        <span class="place">Jan – Mar 2024</span>
+      </div>
+      <ul>
+        <li>Collected, cleaned, and visualized air quality, tree canopy coverage, and planting data to assess environmental disparities across 10+ census tracts in Pilsen using QGIS and Excel.</li>
+        <li>Created a tree-planting need indicator to flag high-priority areas and presented findings to residents and community organizations as actionable recommendations.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-label">Skills</div>
+
+    <div class="skill-group">
+      <h4>Programming Languages</h4>
+      <div class="tags">
+        <span>SQL</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>scikit-learn</span><span>R</span><span>dplyr</span><span>ggplot2</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Analytical Tools</h4>
+      <div class="tags">
+        <span>Tableau</span><span>Power BI</span><span>Excel</span><span>VS Code</span><span>Jupyter</span><span>ArcGIS Online</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Data Management</h4>
+      <div class="tags">
+        <span>Data Cleaning &amp; Wrangling</span><span>Feature Engineering</span><span>ETL Automation</span><span>Query Optimization</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Predictive &amp; Statistical Analysis</h4>
+      <div class="tags">
+        <span>Regression</span><span>Classification</span><span>Hypothesis Testing</span><span>Correlation Analysis</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Business Analytics</h4>
+      <div class="tags">
+        <span>Business Intelligence</span><span>KPI Tracking</span><span>Market Analysis</span><span>Forecasting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Let's connect — <a href="mailto:adrienchai6@gmail.com">adrienchai6@gmail.com</a> · <a href="https://linkedin.com/in/adrienchai" target="_blank" rel="noopener">LinkedIn</a></p>
+    <p style="margin-top:8px">© 2026 Adrien (Zhiling) Chai</p>
+  </div>
+</footer>
+
+</body>
+</html>
